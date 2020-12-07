@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import { TimeLine } from "./components/timeline";
+
+export const App = () => {
+  const steps = [
+    {label: 'Refund requested', subLabel:"3rd May 14:04", type: 'success', description: 'We have received your request and will assign it to one of our agents.'},
+    {label: 'In progress', subLabel:"4th May 10:25", type: 'success', description: 'We’ll review your request and apply for any available refund from the carrier(s).'},
+    {label: 'Carrier approved', subLabel:' ', type: '', description: 'Carrier approved refund.'},
+    {label: 'Refund completed', subLabel:' ', type: '', description: 'Refund issued.'}
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TimeLine steps={steps}></TimeLine>
   );
 }
-
-export default App;

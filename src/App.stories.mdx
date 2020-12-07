@@ -1,0 +1,26 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Button } from './stories/Button';
+
+<Meta title="MDX/Button" component={Button} />
+
+# Defining Stories using MDX
+
+* Default button
+* Large button
+
+export const Template = (args) => <Button {...args} />
+
+<Canvas>
+    <Story name="Default" args={{ 
+        label: 'Submit' 
+    }}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Large Gray" args={{ 
+        label: 'Submit',
+        size: 'large',
+        backgroundColor: '#efefef'
+    }}>
+        {Template.bind({})}
+    </Story>
+</Canvas>
