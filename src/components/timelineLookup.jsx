@@ -11,13 +11,14 @@ export const TimeLineLookup = () => {
         {label: 'Refund completed', subLabel:' ', type: '', description: 'Refund issued.'}
     ];
 
-    const lookupOrder = () => {
+    const lookupTimeline = () => {
         setSteps(stepsData);
     }
 
     return (
         <div>
-            <input type="text" placeholder="Order Number" /> <button onClick={lookupOrder}>View Timeline</button>
+            <input type="text" placeholder="Order Number" /> 
+            <button onClick={lookupTimeline}>View Timeline</button>
             <br /><br />
             <TimeLine steps={steps}></TimeLine>
         </div>
