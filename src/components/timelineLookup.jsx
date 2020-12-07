@@ -13,10 +13,10 @@ export const TimeLineLookup = () => {
     const lookupTimeline = () => {
         setSteps(stepsData); 
     }
-    
+
     return (
         <div>
-            <input type="text" placeholder="Order Number" defaultValue={''} /> 
+            <input type="text" placeholder="Order Number" /> 
             <button onClick={lookupTimeline}>View Timeline</button>
             <br /><br />
             <TimeLine steps={steps}></TimeLine>
